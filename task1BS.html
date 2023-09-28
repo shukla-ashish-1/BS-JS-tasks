@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <style>
+
+      body{
+        margin:0px;
+        padding:0px;
+      }
+
+      #ethnus{
+        height:50px;
+        width:100%;
+        border: 1px solid skyblue;
+        background-color: skyblue;
+        text-align:center;
+        padding-top:10px;
+        font-size:20px;
+      }
+      #block2{
+        height:500px;
+        width:20%;
+        background-color: darkgrey;
+        text-align:center;
+        /* display:flex; */
+      }
+      #block1{
+        height:100px;
+        width:80%;
+        text-align:center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ethnus"> Ethnus Layout </div>
+    <nav class="navbar navbar-expand-lg " style="background-color: grey;">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">HOME</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">MENU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">CONTACT</a>
+            </li>
+          </ul>
+          <ul class="navbar-nav" style="margin-left:65%">
+            <li class="nav-item" style="margin-right:25px">LOGIN</li>
+            <li>SIGNUP</li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div style="display:flex">
+      <div id="block1">Write content here</div>
+      <div id="block2">This is</div>
+    </div>
+  </body>
+</html>

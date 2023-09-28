@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Animated Car</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        #car-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        #car {
+            position: absolute;
+            top: 0;
+            left: -100px; /* Start the car off-screen to the left */
+            width: 100px;
+            height: auto;
+            transition: left 4s linear;
+        }
+
+        #controls {
+            text-align: center;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Animated Car</h1>
+    
+    <div id="car-container">
+        <img id="car" src="car.gif" alt="Moving Car" style="height:500px;width:600px;margin-top:100px;">
+    </div>
+
+    <div id="controls">
+        <button id="startButton">Start</button>
+        <button id="stopButton">Stop</button>
+    </div>
+
+    <script>
+        var car = document.getElementById("car");
+        var startButton = document.getElementById("startButton");
+        var stopButton = document.getElementById("stopButton");
+        var animationInterval;
+
+        function startAnimation() {
+            car.style.left = "-100px"; 
+            setTimeout(function () {
+                car.style.left = "90vw"; 
+            }, 10);
+
+            animationInterval = setInterval(function () {
+                car.style.left = "-100px"; 
+                setTimeout(function () {
+                    car.style.left = "90vw"; 
+                }, 10);
+            }, 4200); 
+        }
+
+        function stopAnimation() {
+            clearInterval(animationInterval);
+        }
+
+        startButton.addEventListener("click", startAnimation);
+        stopButton.addEventListener("click", stopAnimation);
+    </script>
+</body>
+</html>
